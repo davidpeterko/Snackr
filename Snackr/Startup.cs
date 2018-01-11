@@ -36,7 +36,7 @@ namespace Snackr
             .AddOpenIdConnect("Auth0", options => {
                 // Set the authority to your Auth0 domain
                 options.Authority = $"https://{Configuration["Auth0:Domain"]}";
-
+                    
                 // Configure the Auth0 Client ID and Client Secret
                 options.ClientId = Configuration["Auth0:ClientId"];
                 options.ClientSecret = Configuration["Auth0:ClientSecret"];
@@ -48,12 +48,13 @@ namespace Snackr
                 options.Scope.Clear();
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
+                options.Scope.Add("email");
 
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     NameClaimType = "name"
                 };
-
+                    
                 // Set the callback path, so Auth0 will call back to http://localhost:5000/signin-auth0 
                 // Also ensure that you have added the URL as an Allowed Callback URL in your Auth0 dashboard 
                 options.CallbackPath = new PathString("/signin-auth0");
