@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Snackr/Snackr/Snackr/Snackr.csproj",
+    "projectUniqueName": "/Users/davidk/Snackr/Snackr/Snackr.csproj",
     "projectName": "Snackr",
-    "projectPath": "/Snackr/Snackr/Snackr/Snackr.csproj",
-    "outputPath": "/Snackr/Snackr/Snackr/obj/",
+    "projectPath": "/Users/davidk/Snackr/Snackr/Snackr.csproj",
+    "outputPath": "/Users/davidk/Snackr/Snackr/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -33,6 +33,14 @@
         "EntityFramework": {
           "target": "Package",
           "version": "[6.2.0, )"
+        },
+        "Microsoft.AspNet.Identity.Core": {
+          "target": "Package",
+          "version": "[2.2.1, )"
+        },
+        "Microsoft.AspNet.Identity.EntityFramework": {
+          "target": "Package",
+          "version": "[2.2.1, )"
         },
         "Microsoft.AspNet.Mvc": {
           "target": "Package",

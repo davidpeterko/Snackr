@@ -26,21 +26,6 @@ namespace Snackr
                 .WithCredentials("admin", "texas123").Build();
 
             session = cluster.Connect(keyspace);
-
-            /**
-            cluster = Cluster.Builder()
-                .WithCredentials("admin", "texas123")
-                .AddContactPoint(this.contact)
-                .WithPort(this.port)
-                .Build();
-
-            session = (Session) cluster.Connect(keyspace);
-
-            Metadata metadata = cluster.Metadata;
-            Console.Out.WriteLine("Name of the cluster: " + metadata.ClusterName); 
-            Console.Out.WriteLine("Selected keysapce: " + metadata.GetKeyspace(keyspace).ToString());            
-            Console.Out.WriteLine("Tables in the keyspace: " + metadata.GetTables(keyspace));
-            **/
         }
 
         /// <summary>

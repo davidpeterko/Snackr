@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "fd02a09584fe270461a2e3fd6267860adf19b597"
+    "signature": "01e41cb90babcfb7e096193a6972ca0b3fc84de9"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,8 @@
         "dependencies": {
           "CassandraCSharpDriver": "3.4.0",
           "EntityFramework": "6.2.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.1",
+          "Microsoft.AspNet.Identity.EntityFramework": "2.2.1",
           "Microsoft.AspNet.Mvc": "5.2.4-preview1",
           "Microsoft.AspNet.Razor": "3.2.4-preview1",
           "Microsoft.AspNet.WebPages": "3.2.4-preview1",
@@ -155,6 +157,26 @@
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Identity.Core/2.2.1": {
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
+        },
+        "compile": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
+        "dependencies": {
+          "EntityFramework": "6.2.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.1"
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
+        },
+        "compile": {
+          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
         }
       },
       "Microsoft.AspNet.Mvc/5.2.4-preview1": {
@@ -4254,6 +4276,20 @@
       "sha512": "sha512-RWxdX90MY6tNF8S5lwRvJcHiBMIWwVLCxd4TGIEl3X0yAKaolY2vs4zTCvyCIVkEAMs1aInTgWkYwOjzYvAHWw==",
       "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
       "hashPath": "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jjurNglpmcv0SLBd4Fmar8ZoJ2yqfTf6iuP3p8wVH7Nvanfo8l3qTBzq3qRQz2BQlb6iXJiDWPjcnIImVz512g==",
+      "path": "microsoft.aspnet.identity.core/2.2.1",
+      "hashPath": "microsoft.aspnet.identity.core.2.2.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g3tCS3vZ+hPjqrGrkq2hpl2Wc5Ltaj+kInZM80uENHldTHmrvCpVXvTXcvTt7HU3vupjmYFfNWVFRWCypNZgug==",
+      "path": "microsoft.aspnet.identity.entityframework/2.2.1",
+      "hashPath": "microsoft.aspnet.identity.entityframework.2.2.1.nupkg.sha512"
     },
     "Microsoft.AspNet.Mvc/5.2.4-preview1": {
       "type": "package",
