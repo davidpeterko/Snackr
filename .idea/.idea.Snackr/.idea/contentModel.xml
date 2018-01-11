@@ -16,17 +16,17 @@
         <e p="bundleconfig.json" t="Include" />
         <e p="CassandraConnection.cs" t="Include" />
         <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="InventoryController.cs" t="Include" />
           <e p="RequestController.cs" t="Include" />
           <e p="SnackrController.cs" t="Include" />
           <e p="TakoKoinController.cs" t="Include" />
-          <e p="UserController.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="InventoryViewModel.cs" t="Include" />
-          <e p="UserViewModel.cs" t="Include" />
+          <e p="LoginViewModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -47,6 +47,10 @@
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Account" t="Include">
+            <e p="Index.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
@@ -65,9 +69,6 @@
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="TakoKoin" t="Include">
-            <e p="Index.cshtml" t="Include" />
-          </e>
-          <e p="User" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
         </e>

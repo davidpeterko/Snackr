@@ -26,6 +26,26 @@
   "frameworks": {
     "netcoreapp2.0": {
       "dependencies": {
+        "Auth0": {
+          "target": "Package",
+          "version": "[3.6.0, )"
+        },
+        "Auth0-ASPNET": {
+          "target": "Package",
+          "version": "[2.1.1, )"
+        },
+        "Auth0.AuthenticationApi": {
+          "target": "Package",
+          "version": "[4.3.1, )"
+        },
+        "Auth0.Core": {
+          "target": "Package",
+          "version": "[4.0.2, )"
+        },
+        "Auth0.ManagementApi": {
+          "target": "Package",
+          "version": "[4.10.1, )"
+        },
         "CassandraCSharpDriver": {
           "target": "Package",
           "version": "[3.4.0, )"
@@ -58,6 +78,18 @@
           "target": "Package",
           "version": "[2.0.0, )"
         },
+        "Microsoft.AspNetCore.Authentication.Cookies": {
+          "target": "Package",
+          "version": "[2.0.1, )"
+        },
+        "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+          "target": "Package",
+          "version": "[2.0.1, )"
+        },
+        "Microsoft.AspNetCore.Http": {
+          "target": "Package",
+          "version": "[2.0.1, )"
+        },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
@@ -71,6 +103,10 @@
         "NUnit3TestAdapter": {
           "target": "Package",
           "version": "[3.9.0, )"
+        },
+        "System.Threading.Tasks": {
+          "target": "Package",
+          "version": "[4.3.0, )"
         }
       },
       "imports": [

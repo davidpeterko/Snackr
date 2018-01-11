@@ -31,7 +31,18 @@
         <li><a asp-area="" asp-controller="Inventory" asp-action="Index">Inventory</a></li>
         <li><a asp-area="" asp-controller="Request" asp-action="Index">Request</a></li>
         <li><a asp-area="" asp-controller="TakoKoin" asp-action="Index">Tako Koin</a></li>
-        <li><a asp-area="" asp-controller="User" asp-action="Index">User</a></li>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <li><a asp-area="" asp-controller="Account" asp-action="Index">Your Account</a></li>
+        }
+        @if (User.Identity.IsAuthenticated)
+        {
+            <li><a asp-area="" asp-controller="Account" asp-action="Logout">Logout</a></li>
+        }
+        else
+        {
+            <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+        }
     </ul>
   </div>
 </nav>
