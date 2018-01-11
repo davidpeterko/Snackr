@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Inventory";
+}
+
+@model InventoryViewModel
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<table class="pure-table pure-table-bordered pure-table-striped" data-toggle="table">
+    <thead>
+        <tr>
+            <th>Snack Brand</th>
+            <th>Snack Name</th>
+            <th>Total Available</th>
+            <th>Currently Requested</th>
+            <th>Tako Koin Value</th>
+            <th>Action</th>
+        </tr>
+    </thead>    
+    
+    <tbody>
+       @foreach (var snack in Model.SnackList)
+       {
+           <tr>
+               <td>@snack.snack_brand</td>
+               <td>@snack.snack_name</td>
+               <td>@snack.snack_count</td>
+               <td>Not yet implemented</td>
+               <td>Not yet implemented</td>
+               <td><button class="link">Request</button></td>
+           </tr>
+       }
+    </tbody>
+</table>
+
+
