@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Localization.Internal;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Configuration;
 using Snackr.Models;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Snackr.Controllers
 {
@@ -120,6 +122,19 @@ namespace Snackr.Controllers
         {
             return View();
         }
+
+         public IActionResult Profile()
+        {
+            // set tako koin count in here
+
+            return View(new UserProfileViewModel()
+            {
+                Name = User.Identity.Name,
+                EmailAddress = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value,
+                ProfileImage = User.Claims.FirstOrDefault(c => c.Type == "picture")?.Value
+            });
+        }
+
 
         #region Helpers
 

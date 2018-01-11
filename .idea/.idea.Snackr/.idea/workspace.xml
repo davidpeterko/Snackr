@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44517fb2-7759-4fdf-b77c-ba9eff3e3b21" name="Default" comment="" />
+    <list default="true" id="44517fb2-7759-4fdf-b77c-ba9eff3e3b21" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Snackr/Models/UserProfileViewModel.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Snackr/Views/Account/Profile.cshtml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Snackr/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Snackr/.idea/contentModel.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Snackr/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Snackr/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Snackr/Controllers/AccountController.cs" afterPath="$PROJECT_DIR$/Snackr/Controllers/AccountController.cs" />
+      <change beforePath="$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs" afterPath="$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs" />
+      <change beforePath="$PROJECT_DIR$/Snackr/Startup.cs" afterPath="$PROJECT_DIR$/Snackr/Startup.cs" />
+      <change beforePath="$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml" afterPath="$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml" />
+      <change beforePath="$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml" afterPath="$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml" />
+      <change beforePath="$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml" afterPath="$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml" />
+      <change beforePath="$PROJECT_DIR$/Snackr/bin/Debug/netcoreapp2.0/Snackr.dll" afterPath="$PROJECT_DIR$/Snackr/bin/Debug/netcoreapp2.0/Snackr.dll" />
+      <change beforePath="$PROJECT_DIR$/Snackr/bin/Debug/netcoreapp2.0/Snackr.pdb" afterPath="$PROJECT_DIR$/Snackr/bin/Debug/netcoreapp2.0/Snackr.pdb" />
+      <change beforePath="$PROJECT_DIR$/Snackr/obj/Debug/netcoreapp2.0/Snackr.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/Snackr/obj/Debug/netcoreapp2.0/Snackr.csproj.CoreCompileInputs.cache" />
+      <change beforePath="$PROJECT_DIR$/Snackr/obj/Debug/netcoreapp2.0/Snackr.dll" afterPath="$PROJECT_DIR$/Snackr/obj/Debug/netcoreapp2.0/Snackr.dll" />
+      <change beforePath="$PROJECT_DIR$/Snackr/obj/Debug/netcoreapp2.0/Snackr.pdb" afterPath="$PROJECT_DIR$/Snackr/obj/Debug/netcoreapp2.0/Snackr.pdb" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,19 +26,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6346516">
+    <splitter split-orientation="horizontal" split-proportion="0.44020715">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Snackr/wwwroot/css/site.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="appsettings.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Snackr/appsettings.json">
               <provider selected="true" editor-type-id="text-editor">
@@ -33,12 +39,33 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="AccountController.cs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Snackr/Controllers/AccountController.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="412">
+                  <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="Login.cshtml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="45">
+                  <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+                  <folding>
+                    <marker date="1515707361000" expanded="true" signature="37:95" ph="@..." />
+                    <marker date="1515707361000" expanded="true" signature="97:1642" ph="&lt;div.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="119:1635" ph="&lt;div.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="166:1624" ph="&lt;section.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="188:1605" ph="&lt;form.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="467:743" ph="&lt;div.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="760:1024" ph="&lt;div.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="1042:1188" ph="&lt;div.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="1272:1585" ph="&lt;div.../&gt;" />
+                    <marker date="1515707361000" expanded="true" signature="1317:1562" ph="&lt;a.../&gt;" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -47,78 +74,79 @@
             <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="165">
-                  <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding />
+                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                  <folding>
+                    <marker date="1515706009000" expanded="true" signature="22:61" ph="@..." />
+                    <marker date="1515706009000" expanded="true" signature="80:119" ph="&lt;h3.../&gt;" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Profile.cshtml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Profile.cshtml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+                  <folding>
+                    <marker date="1515709103000" expanded="true" signature="43:107" ph="@..." />
+                    <marker date="1515709103000" expanded="true" signature="109:422" ph="&lt;div.../&gt;" />
+                    <marker date="1515709103000" expanded="true" signature="131:415" ph="&lt;div.../&gt;" />
+                    <marker date="1515709103000" expanded="true" signature="163:404" ph="&lt;div.../&gt;" />
+                    <marker date="1515709103000" expanded="true" signature="235:389" ph="&lt;div.../&gt;" />
+                    <marker date="1515709103000" expanded="true" signature="424:548" ph="&lt;div.../&gt;" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UserProfileViewModel.cs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Snackr/Models/UserProfileViewModel.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+                  <folding>
+                    <marker date="1515707123000" expanded="true" signature="23:266" ph="{...}" />
+                    <marker date="1515707123000" expanded="true" signature="63:264" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Snackr/Startup.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
                   <folding>
-                    <marker date="1515701551000" expanded="true" signature="6:448" ph="..." />
-                    <marker date="1515701551000" expanded="true" signature="466:4335" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="493:4333" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="552:615" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="838:3623" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="942:1257" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="1334:3540" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="1920:2119" ph="/* Set the callback path, so Auth0 will call back to http://localhost:5000/signin-auth0 ... */" />
-                    <marker date="1515701551000" expanded="true" signature="2374:3522" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="2503:3504" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="2806:3317" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="2895:3197" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="3811:4326" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="3858:3935" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="3952:4036" ph="{...}" />
-                    <marker date="1515701551000" expanded="true" signature="4143:4314" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="6:486" ph="..." />
+                    <marker date="1515706437000" expanded="true" signature="504:4582" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="531:4580" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="590:653" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="876:3870" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="980:1295" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="1372:3787" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="2086:2148" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="2167:2366" ph="/* Set the callback path, so Auth0 will call back to http://localhost:5000/signin-auth0 ... */" />
+                    <marker date="1515706437000" expanded="true" signature="2621:3769" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="2750:3751" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="3053:3564" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="3142:3444" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="4058:4573" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="4105:4182" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="4199:4283" ph="{...}" />
+                    <marker date="1515706437000" expanded="true" signature="4390:4561" ph="{...}" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SnackrController.cs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Snackr/Controllers/SnackrController.cs">
+          <file leaf-file-name="Microsoft.Common.CurrentVersion.targets" pinned="false" current-in-tab="false">
+            <entry file="file:///usr/local/share/dotnet/sdk/2.0.0/Microsoft.Common.CurrentVersion.targets">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-                  <folding>
-                    <marker date="1515702275000" expanded="true" signature="61:223" ph="{...}" />
-                    <marker date="1515702275000" expanded="true" signature="110:221" ph="{...}" />
-                    <marker date="1515702275000" expanded="true" signature="168:215" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Index.cshtml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Snackr/Views/Home/Index.cshtml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <marker date="1515700391000" expanded="true" signature="0:139" ph="&lt;html.../&gt;" />
-                    <marker date="1515700391000" expanded="true" signature="7:47" ph="&lt;head.../&gt;" />
-                    <marker date="1515700391000" expanded="true" signature="48:131" ph="&lt;body.../&gt;" />
-                    <marker date="1515700391000" expanded="true" signature="55:123" ph="&lt;div.../&gt;" />
-                    <marker date="1515700391000" expanded="true" signature="65:116" ph="&lt;h1.../&gt;" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="InventoryViewModel.cs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Snackr/Models/InventoryViewModel.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-                  <folding>
-                    <marker date="1515684903000" expanded="true" signature="58:161" ph="{...}" />
-                    <marker date="1515684903000" expanded="true" signature="96:159" ph="{...}" />
-                  </folding>
+                <state relative-caret-position="677">
+                  <caret line="4076" column="0" lean-forward="false" selection-start-line="4076" selection-start-column="0" selection-end-line="4076" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -130,24 +158,23 @@
           <file leaf-file-name="_Layout.cshtml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+                <state relative-caret-position="75">
+                  <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
                   <folding>
-                    <marker date="1515702014000" expanded="true" signature="16:2770" ph="&lt;html.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="23:806" ph="&lt;head.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="808:2762" ph="&lt;body.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="816:2259" ph="&lt;nav.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="871:2252" ph="&lt;div.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="901:1406" ph="&lt;div.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="939:1253" ph="&lt;button.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="1411:2243" ph="&lt;ul.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="1802:1954" ph="@..." />
-                    <marker date="1515702014000" expanded="true" signature="1837:1954" ph="{...}" />
-                    <marker date="1515702014000" expanded="true" signature="1963:2233" ph="@..." />
-                    <marker date="1515702014000" expanded="true" signature="1998:2110" ph="{...}" />
-                    <marker date="1515702014000" expanded="true" signature="2123:2233" ph="{...}" />
-                    <marker date="1515702014000" expanded="true" signature="2261:2476" ph="&lt;div.../&gt;" />
-                    <marker date="1515702014000" expanded="true" signature="2330:2469" ph="&lt;footer.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="16:2742" ph="&lt;html.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="23:782" ph="&lt;head.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="784:2734" ph="&lt;body.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="792:2231" ph="&lt;nav.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="847:2224" ph="&lt;div.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="877:1382" ph="&lt;div.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="915:1229" ph="&lt;button.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="1387:2215" ph="&lt;ul.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="1778:2205" ph="&lt;ul.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="1831:2191" ph="@..." />
+                    <marker date="1515707384000" expanded="true" signature="1866:2064" ph="{...}" />
+                    <marker date="1515707384000" expanded="true" signature="2081:2191" ph="{...}" />
+                    <marker date="1515707384000" expanded="true" signature="2233:2448" ph="&lt;div.../&gt;" />
+                    <marker date="1515707384000" expanded="true" signature="2302:2441" ph="&lt;footer.../&gt;" />
                   </folding>
                 </state>
               </provider>
@@ -173,12 +200,16 @@
     <setting file="file://$PROJECT_DIR$/Snackr/Models/InventoryViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/Inventory/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/TakoKoin/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/Request/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/Snackr/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Snackr/Models/UserProfileViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/Shared/_ValidationScriptsPartial.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Snackr/Views/Account/Profile.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Controllers/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/SnackrBackend.cs" root0="FORCE_HIGHLIGHTING" />
@@ -188,9 +219,7 @@
     <setting file="file://$PROJECT_DIR$/Snackr/Controllers/InventoryController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Controllers/TakoKoinController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Controllers/SnackrController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Snackr/Controllers/RequestController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -219,14 +248,17 @@
         <option value="$PROJECT_DIR$/Snackr/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/Snackr/appsettings.json" />
         <option value="$PROJECT_DIR$/Snackr/Views/Home/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs" />
-        <option value="$PROJECT_DIR$/Snackr/Startup.cs" />
-        <option value="$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml.cs" />
-        <option value="$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml" />
-        <option value="$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Snackr/Controllers/AccountController.cs" />
         <option value="$PROJECT_DIR$/Snackr/Controllers/SnackrController.cs" />
+        <option value="$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs" />
+        <option value="$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Snackr/Views/Account/Page1.cshtml" />
+        <option value="$PROJECT_DIR$/Snackr/Startup.cs" />
+        <option value="$PROJECT_DIR$/Snackr/Models/UserProfileViewModel.cs" />
+        <option value="$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml" />
+        <option value="$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/Snackr/Views/Account/Profile.cshtml" />
+        <option value="$PROJECT_DIR$/Snackr/Controllers/AccountController.cs" />
       </list>
     </option>
   </component>
@@ -266,6 +298,19 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Snackr (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Snackr" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Snackr (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Snackr" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Dependencies" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Snackr (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Snackr" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Dependencies" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name=".NETCoreApp 2" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -378,7 +423,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27281000" />
+    <option name="totallyTimeSpent" value="30824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,23 +443,38 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24851191" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35416666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31919643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1564734" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24851191" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31919643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1564734" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -452,13 +512,104 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/SnackrController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <marker date="1515702275000" expanded="true" signature="110:221" ph="{...}" />
+            <marker date="1515702275000" expanded="true" signature="168:215" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="57" column="59" lean-forward="false" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+          <folding>
+            <marker date="1515706437000" expanded="true" signature="6:486" ph="..." />
+            <marker date="1515706437000" expanded="true" signature="504:4582" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="531:4580" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="590:653" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="876:3870" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="980:1295" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="1372:3787" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="2086:2148" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="2167:2366" ph="/* Set the callback path, so Auth0 will call back to http://localhost:5000/signin-auth0 ... */" />
+            <marker date="1515706437000" expanded="true" signature="2621:3769" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="2750:3751" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="3053:3564" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="3142:3444" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4058:4573" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4105:4182" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4199:4283" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4390:4561" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding>
+            <marker date="1515707384000" expanded="true" signature="16:2742" ph="&lt;html.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="23:782" ph="&lt;head.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="784:2734" ph="&lt;body.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="792:2231" ph="&lt;nav.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="847:2224" ph="&lt;div.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="877:1382" ph="&lt;div.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="915:1229" ph="&lt;button.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="1387:2215" ph="&lt;ul.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="1778:2205" ph="&lt;ul.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="1831:2191" ph="@..." />
+            <marker date="1515707384000" expanded="true" signature="1866:2064" ph="{...}" />
+            <marker date="1515707384000" expanded="true" signature="2081:2191" ph="{...}" />
+            <marker date="1515707384000" expanded="true" signature="2233:2448" ph="&lt;div.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="2302:2441" ph="&lt;footer.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Profile.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/AccountController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1136">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Snackr/Controllers/InventoryController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding>
             <marker date="1515686244000" expanded="false" signature="6:129" ph="..." />
-            <marker date="1515686244000" expanded="true" signature="159:1023" ph="{...}" />
             <marker date="1515686244000" expanded="true" signature="211:1021" ph="{...}" />
             <marker date="1515686244000" expanded="true" signature="254:480" ph="{...}" />
             <marker date="1515686244000" expanded="true" signature="324:436" ph="{...}" />
@@ -473,7 +624,6 @@
         <state relative-caret-position="300">
           <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding>
-            <marker date="1515687987000" expanded="true" signature="34:1068" ph="{...}" />
             <marker date="1515687987000" expanded="true" signature="73:1066" ph="{...}" />
             <marker date="1515687987000" expanded="true" signature="302:421" ph="{...}" />
             <marker date="1515687987000" expanded="true" signature="438:509" ph="/// Connect to the cluster ... " />
@@ -623,7 +773,6 @@
         <state relative-caret-position="420">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <marker date="1515687987000" expanded="true" signature="34:1068" ph="{...}" />
             <marker date="1515687987000" expanded="true" signature="73:1066" ph="{...}" />
             <marker date="1515687987000" expanded="true" signature="302:421" ph="{...}" />
             <marker date="1515687987000" expanded="true" signature="438:509" ph="/// Connect to the cluster ... " />
@@ -635,46 +784,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Views/LogIn/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/LogInController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Models/UserViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/UserController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Views/User/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/LogIn/Index.cshtml" />
+    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/LogInController.cs" />
+    <entry file="file://$PROJECT_DIR$/Snackr/Models/UserViewModel.cs" />
+    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/UserController.cs" />
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/User/Index.cshtml" />
     <entry file="file://$PROJECT_DIR$/Snackr/wwwroot/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -683,29 +797,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Web.Config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Web.Config" />
     <entry file="file://$PROJECT_DIR$/Snackr/Controllers/InventoryController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1515686244000" expanded="false" signature="6:129" ph="..." />
-            <marker date="1515686244000" expanded="true" signature="159:1023" ph="{...}" />
             <marker date="1515686244000" expanded="true" signature="211:1021" ph="{...}" />
             <marker date="1515686244000" expanded="true" signature="254:480" ph="{...}" />
             <marker date="1515686244000" expanded="true" signature="324:436" ph="{...}" />
@@ -720,28 +818,12 @@
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <marker date="1515684903000" expanded="true" signature="58:161" ph="{...}" />
             <marker date="1515684903000" expanded="true" signature="96:159" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml.cs" />
     <entry file="file://$PROJECT_DIR$/Snackr/Views/Inventory/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -759,20 +841,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Snackr/Views/Home/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515700391000" expanded="true" signature="0:139" ph="&lt;html.../&gt;" />
             <marker date="1515700391000" expanded="true" signature="7:47" ph="&lt;head.../&gt;" />
             <marker date="1515700391000" expanded="true" signature="48:131" ph="&lt;body.../&gt;" />
             <marker date="1515700391000" expanded="true" signature="55:123" ph="&lt;div.../&gt;" />
@@ -786,74 +859,148 @@
         <state relative-caret-position="135">
           <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <marker date="1515702275000" expanded="true" signature="61:223" ph="{...}" />
             <marker date="1515702275000" expanded="true" signature="110:221" ph="{...}" />
             <marker date="1515702275000" expanded="true" signature="168:215" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/AccountController.cs">
+    <entry file="file://$PROJECT_DIR$/Snackr/Models/LoginViewModel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1515705601000" expanded="true" signature="69:390" ph="{...}" />
+            <marker date="1515705601000" expanded="true" signature="103:388" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml">
+    <entry file="file:///usr/local/share/dotnet/sdk/2.0.0/Microsoft.Common.CurrentVersion.targets">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-          <folding>
-            <marker date="1515702014000" expanded="true" signature="16:2770" ph="&lt;html.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="23:806" ph="&lt;head.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="808:2762" ph="&lt;body.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="816:2259" ph="&lt;nav.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="871:2252" ph="&lt;div.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="901:1406" ph="&lt;div.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="939:1253" ph="&lt;button.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="1411:2243" ph="&lt;ul.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="1802:1954" ph="@..." />
-            <marker date="1515702014000" expanded="true" signature="1837:1954" ph="{...}" />
-            <marker date="1515702014000" expanded="true" signature="1963:2233" ph="@..." />
-            <marker date="1515702014000" expanded="true" signature="1998:2110" ph="{...}" />
-            <marker date="1515702014000" expanded="true" signature="2123:2233" ph="{...}" />
-            <marker date="1515702014000" expanded="true" signature="2261:2476" ph="&lt;div.../&gt;" />
-            <marker date="1515702014000" expanded="true" signature="2330:2469" ph="&lt;footer.../&gt;" />
-          </folding>
+        <state relative-caret-position="677">
+          <caret line="4076" column="0" lean-forward="false" selection-start-line="4076" selection-start-column="0" selection-end-line="4076" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1515706009000" expanded="true" signature="22:61" ph="@..." />
+            <marker date="1515706009000" expanded="true" signature="80:119" ph="&lt;h3.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Profile.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <marker date="1515709103000" expanded="true" signature="43:107" ph="@..." />
+            <marker date="1515709103000" expanded="true" signature="109:422" ph="&lt;div.../&gt;" />
+            <marker date="1515709103000" expanded="true" signature="131:415" ph="&lt;div.../&gt;" />
+            <marker date="1515709103000" expanded="true" signature="163:404" ph="&lt;div.../&gt;" />
+            <marker date="1515709103000" expanded="true" signature="235:389" ph="&lt;div.../&gt;" />
+            <marker date="1515709103000" expanded="true" signature="424:548" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Models/UserProfileViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <marker date="1515707123000" expanded="true" signature="23:266" ph="{...}" />
+            <marker date="1515707123000" expanded="true" signature="63:264" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/Account/Login.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding>
+            <marker date="1515707361000" expanded="true" signature="37:95" ph="@..." />
+            <marker date="1515707361000" expanded="true" signature="97:1642" ph="&lt;div.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="119:1635" ph="&lt;div.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="166:1624" ph="&lt;section.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="188:1605" ph="&lt;form.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="467:743" ph="&lt;div.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="760:1024" ph="&lt;div.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="1042:1188" ph="&lt;div.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="1272:1585" ph="&lt;div.../&gt;" />
+            <marker date="1515707361000" expanded="true" signature="1317:1562" ph="&lt;a.../&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Snackr/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
-            <marker date="1515701551000" expanded="true" signature="6:448" ph="..." />
-            <marker date="1515701551000" expanded="true" signature="466:4335" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="493:4333" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="552:615" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="838:3623" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="942:1257" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="1334:3540" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="1920:2119" ph="/* Set the callback path, so Auth0 will call back to http://localhost:5000/signin-auth0 ... */" />
-            <marker date="1515701551000" expanded="true" signature="2374:3522" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="2503:3504" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="2806:3317" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="2895:3197" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="3811:4326" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="3858:3935" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="3952:4036" ph="{...}" />
-            <marker date="1515701551000" expanded="true" signature="4143:4314" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="6:486" ph="..." />
+            <marker date="1515706437000" expanded="true" signature="504:4582" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="531:4580" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="590:653" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="876:3870" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="980:1295" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="1372:3787" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="2086:2148" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="2167:2366" ph="/* Set the callback path, so Auth0 will call back to http://localhost:5000/signin-auth0 ... */" />
+            <marker date="1515706437000" expanded="true" signature="2621:3769" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="2750:3751" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="3053:3564" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="3142:3444" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4058:4573" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4105:4182" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4199:4283" ph="{...}" />
+            <marker date="1515706437000" expanded="true" signature="4390:4561" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Controllers/AccountController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Snackr/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <marker date="1515707384000" expanded="true" signature="16:2742" ph="&lt;html.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="23:782" ph="&lt;head.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="784:2734" ph="&lt;body.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="792:2231" ph="&lt;nav.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="847:2224" ph="&lt;div.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="877:1382" ph="&lt;div.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="915:1229" ph="&lt;button.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="1387:2215" ph="&lt;ul.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="1778:2205" ph="&lt;ul.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="1831:2191" ph="@..." />
+            <marker date="1515707384000" expanded="true" signature="1866:2064" ph="{...}" />
+            <marker date="1515707384000" expanded="true" signature="2081:2191" ph="{...}" />
+            <marker date="1515707384000" expanded="true" signature="2233:2448" ph="&lt;div.../&gt;" />
+            <marker date="1515707384000" expanded="true" signature="2302:2441" ph="&lt;footer.../&gt;" />
           </folding>
         </state>
       </provider>

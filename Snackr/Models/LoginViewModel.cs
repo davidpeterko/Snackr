@@ -1,17 +1,4 @@
-using Auth0.AuthenticationApi;
-using Auth0.AuthenticationApi.Models;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using System;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Localization.Internal;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Microsoft.Extensions.Configuration;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Snackr.Models
 {

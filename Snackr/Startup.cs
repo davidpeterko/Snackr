@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Snackr
 {
@@ -46,6 +47,12 @@ namespace Snackr
                 // Configure the scope
                 options.Scope.Clear();
                 options.Scope.Add("openid");
+                options.Scope.Add("profile");
+
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType = "name"
+                };
 
                 // Set the callback path, so Auth0 will call back to http://localhost:5000/signin-auth0 
                 // Also ensure that you have added the URL as an Allowed Callback URL in your Auth0 dashboard 

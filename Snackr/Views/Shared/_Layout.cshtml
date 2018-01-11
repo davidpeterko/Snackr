@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Snackr</title>
+    <title></title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
@@ -31,18 +31,17 @@
         <li><a asp-area="" asp-controller="Inventory" asp-action="Index">Inventory</a></li>
         <li><a asp-area="" asp-controller="Request" asp-action="Index">Request</a></li>
         <li><a asp-area="" asp-controller="TakoKoin" asp-action="Index">Tako Koin</a></li>
-        @if (User.Identity.IsAuthenticated)
-        {
-            <li><a asp-area="" asp-controller="Account" asp-action="Index">Your Account</a></li>
-        }
-        @if (User.Identity.IsAuthenticated)
-        {
-            <li><a asp-area="" asp-controller="Account" asp-action="Logout">Logout</a></li>
-        }
-        else
-        {
-            <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
-        }
+        <ul class="nav navbar-nav navbar-right">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li><a asp-controller="Account" asp-action="Profile">Account</a></li>
+                <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+            }
+            else
+            {
+                <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+            }
+        </ul>
     </ul>
   </div>
 </nav>
