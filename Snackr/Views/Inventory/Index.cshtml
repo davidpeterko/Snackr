@@ -28,7 +28,14 @@
                <td>@snack.snack_count</td>
                <td>Not yet implemented</td>
                <td>Not yet implemented</td>
-               <td><button class="link">Request</button></td>
+               @if (User.Identity.IsAuthenticated)
+               {
+                   <td><button class="link"><a asp-area="" asp-controller="Request" asp-action="Index">Request</a></button></td>
+               }
+               else
+               {
+                   <td><button class="link"><a asp-area="" asp-controller="Account" asp-action="AccessDenied">Request</a></button></td>
+               }
            </tr>
        }
     </tbody>

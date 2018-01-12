@@ -1,0 +1,21 @@
+﻿@model Snackr.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log In";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <section>
+            <form asp-controller="Account" asp-action="AccessDenied" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+                <br/>
+                
+                <center>
+                    <h1 class="text-danger">Access Denied</h1>
+                    <p class="text-danger">You are not under the Gene By Gene domain to access Snackr.</p>
+                </center>
+            </form>
+        </section>
+    </div>
+</div>
