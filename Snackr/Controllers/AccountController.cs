@@ -32,7 +32,7 @@ namespace Snackr.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login(string returnUrl = "/")
+        public IActionResult Login(string returnUrl = "/Account/Profile")
         {
             ViewData["ReturnUrl"] = returnUrl;
 
@@ -102,7 +102,7 @@ namespace Snackr.Controllers
                 // Indicate here where Auth0 should redirect the user after a logout.
                 // Note that the resulting absolute Uri must be whitelisted in the 
                 // **Allowed Logout URLs** settings for the client.
-                RedirectUri = Url.Action("Login", "Account")
+                RedirectUri = Url.Action("Index", "Home")
             });
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
