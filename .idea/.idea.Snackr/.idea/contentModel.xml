@@ -96,6 +96,7 @@
             <e p="glyphicons-halflings-regular.ttf" t="Include" />
             <e p="glyphicons-halflings-regular.woff" t="Include" />
             <e p="glyphicons-halflings-regular.woff2" t="Include" />
+            <e p="Stay Wildy.ttf" t="Include" />
           </e>
           <e p="images" t="Include">
             <e p="snackr_logo.png" t="Include" />
