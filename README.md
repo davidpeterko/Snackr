@@ -27,6 +27,9 @@ Create Table Code:
     AND read_repair_chance = 0.0
     AND speculative_retry = '99PERCENTILE';
 ```
+# Users
+Users class object will contain the basic information of a user: (email text, first_name text, surname_text, tk_count int)
+More information to be added at a later date.
 
 # Requests
 Not yet implemented but will be implemented with a Requests class with properties (email text, snack_brand text, snack_name text, snack_count). When a request is made, database is checked if user has enough Tako Koins to make this request; redirect URI to tako koin page if not enough.
