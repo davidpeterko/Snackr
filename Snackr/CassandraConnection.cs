@@ -1,45 +1,39 @@
-﻿using Cassandra;
+﻿using System;
+using Cassandra;
 
 namespace Snackr
 {
-    public class CassandraConnection
+    public class CassandraConnection : IConnection
     {
-        private Cluster cluster;
-        private ISession session;
-        private readonly string contact;
-        private readonly int port;
-        private readonly string keyspace;
-
-        public CassandraConnection()
+        public Cluster Cluster { get; set; }
+        public ISession Session { get; set; }
+        public string Keyspace { get; set; }
+        public int Port { get; set; }
+        public Uri HostName { get; set; }
+        
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="keyspace"></param>
+        /// <param name="port"></param>
+        /// <param name="host"></param>
+        public CassandraConnection(string keyspace, Uri host, int port)
         {
-            contact = "10.11.110.145";
-            port = 9042;
-            keyspace = "snackapi";
+            this.Keyspace = keyspace;
+            this.Port = port;
+            this.HostName = host;
         }
        
         /// <summary>
         /// Connect to the cluster
         /// </summary>
-        public void Connect()
+        public ISession Connect()
         {
-            cluster = Cluster.Builder().AddContactPoint(contact).WithPort(port)
-                .WithCredentials("admin", "texas123").Build();
-
-            session = cluster.Connect(keyspace);
+            this.Cluster = Cluster.Builder().AddContactPoint(this.HostName.ToString()).WithPort(this.Port)
+                .WithCredentials("admin", "texas123").Build(); 
+            
+            return this.Session = Cluster.Connect(this.Keyspace);
         }
 
-        /// <summary>
-        /// gets the current session
-        /// </summary>
-        /// <returns></returns>
-        protected ISession getSession()
-        {
-            if (session == null)
-            {
-                Connect();                
-            }
-
-            return session;
-        }
     }
 }

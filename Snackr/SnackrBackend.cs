@@ -4,17 +4,16 @@ using System.Collections.Generic;
 
 namespace Snackr
 {
-    public class SnackrBackend : CassandraConnection
+    public class SnackrBackend
     {
-        private CassandraConnection c;
+        public IConnection _CassandraConnection;
 
         /// <summary>
-        /// constructor to set the cassandra connection
+        /// constructor to set the cassandra connection, constructor injection
         /// </summary>
-        public SnackrBackend()
+        public SnackrBackend(IConnection c)
         {
-            c = new CassandraConnection();
-            //c.Connect();
+            this._CassandraConnection = c;
         }
         
         /// <summary>
@@ -22,11 +21,11 @@ namespace Snackr
         /// </summary>
         /// <param name="brand"></param>
         /// <returns></returns>
-        public List<Snack> getSnacks()
+        public List<Snack> GetSnacks()
         {
             var snacks = new List<Snack>();
             var cql = "SELECT * FROM snack_counts;";
-            var localSession = getSession();
+            var localSession = _CassandraConnection.Session;
 
             do
             {
@@ -63,7 +62,7 @@ namespace Snackr
         {
             var brands = new List<string>();
             var cql = "SELECT snack_brand FROM snack_counts;";
-            var localSession = getSession();
+            var localSession = _CassandraConnection.Session;
 
             do
             {
@@ -90,11 +89,11 @@ namespace Snackr
         /// get list of snacks based on snack band
         /// </summary>
         /// <returns></returns>
-        public List<string> getSnackNameList(string brand)
+        public List<string> GetSnackNameList(string brand)
         {
             var names = new List<string>();
             var cql = "SELECT snack_name FROM snack_counts WHERE snack_brand='" + brand + "';";
-            var localSession = getSession();
+            var localSession = _CassandraConnection.Session;
 
             do
             {
@@ -121,11 +120,11 @@ namespace Snackr
         /// total number of snacks
         /// </summary>
         /// <returns></returns>
-        public int getTotalSnackCount()
+        public int GetTotalSnackCount()
         {
             var count = 0;
             var cql = "SELECT snack_count FROM snack_counts;";
-            var localSession = getSession();
+            var localSession = _CassandraConnection.Session;
 
             do
             {

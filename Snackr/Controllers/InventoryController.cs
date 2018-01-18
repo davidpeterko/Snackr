@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +14,7 @@ namespace Snackr.Controllers
         {
             var model = new InventoryViewModel
             {
-                SnackList = new SnackrBackend().getSnacks().OrderBy(s => s.snack_brand).ToList()
+                SnackList = new SnackrBackend(new CassandraConnection("snackapi", new Uri("10.11.110.145"), 9042)).GetSnacks().OrderBy(s => s.snack_brand).ToList()
             };
 
             return View(model);

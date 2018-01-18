@@ -26,6 +26,11 @@ namespace Snackr.Controllers
             this._configuration = configuration;
         }
 
+        /// <summary>
+        /// Main login
+        /// </summary>
+        /// <param name="returnUrl"></param>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Login(string returnUrl = "/Account/Profile")
         {
@@ -34,6 +39,12 @@ namespace Snackr.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Basic login
+        /// </summary>
+        /// <param name="vm"></param>
+        /// <param name="returnUrl"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel vm, string returnUrl = null)
         {
@@ -78,6 +89,12 @@ namespace Snackr.Controllers
             return View(vm);
         }
 
+        /// <summary>
+        /// External login
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <param name="returnUrl"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task LoginExternal(string connection, string returnUrl = "/")
         {
@@ -89,6 +106,10 @@ namespace Snackr.Controllers
             await HttpContext.ChallengeAsync("Auth0", properties);
         }
 
+        /// <summary>
+        /// Log out
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
         public async Task Logout()
         {
