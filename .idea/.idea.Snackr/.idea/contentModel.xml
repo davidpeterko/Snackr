@@ -51,7 +51,6 @@
           <e p="Account" t="Include">
             <e p="AccessDenied.cshtml" t="Include" />
             <e p="Claims.cshtml" t="Include" />
-            <e p="Index.cshtml" t="Include" />
             <e p="Login.cshtml" t="Include" />
             <e p="Profile.cshtml" t="Include" />
           </e>
