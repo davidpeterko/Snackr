@@ -26,11 +26,6 @@ namespace Snackr.Controllers
             this._configuration = configuration;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet]
         public IActionResult Login(string returnUrl = "/Account/Profile")
         {
