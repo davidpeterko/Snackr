@@ -22,7 +22,7 @@
 
 # Project Files #
 #################
-*.idea
+**.idea/**
 
 # Logs and databases #
 ######################
