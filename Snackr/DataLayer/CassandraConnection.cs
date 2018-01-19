@@ -1,5 +1,7 @@
 ﻿using System;
+using Auth0.ManagementApi.Models;
 using Cassandra;
+using Microsoft.Extensions.Configuration;
 
 namespace Snackr.Interfaces
 {
@@ -10,6 +12,10 @@ namespace Snackr.Interfaces
         public string Keyspace { get; set; }
         public int Port { get; set; }
         public string HostName { get; set; }
+        public string User { get; set; }
+        public string Password { get; set; }
+
+        private IConfiguration _configuration;
         
         /// <summary>
         /// Constructor
@@ -17,11 +23,13 @@ namespace Snackr.Interfaces
         /// <param name="keyspace"></param>
         /// <param name="port"></param>
         /// <param name="host"></param>
-        public CassandraConnection(string keyspace, string host, int port)
+        public CassandraConnection(string keyspace, string host, int port, string user, string password)
         {
             this.Keyspace = keyspace;
             this.HostName = host;
             this.Port = port;
+            this.User = user;
+            this.Password = password;
 
             this.Session = Connect();
         }
@@ -31,10 +39,10 @@ namespace Snackr.Interfaces
         /// </summary>
         public ISession Connect()
         {
-            this.Cluster = Cluster.Builder().AddContactPoint(this.HostName.ToString()).WithPort(this.Port)
-                .WithCredentials("admin", "texas123").Build(); 
+            Cluster = Cluster.Builder().AddContactPoint(HostName).WithPort(Port)
+                .WithCredentials(User, Password).Build(); 
             
-            return Cluster.Connect(this.Keyspace);
+            return Cluster.Connect(Keyspace);
         }
 
     }

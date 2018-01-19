@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Snackr.Models;
 using Snackr.Interfaces;
 
@@ -11,14 +12,25 @@ namespace Snackr.Controllers
 {
     public class InventoryController : Controller
     {
+        private readonly IConfiguration _configuration;
+
+        public InventoryController(IConfiguration configuration)
+        {
+            this._configuration = configuration;
+        }
+        
         public IActionResult Index()
         {
-            CassandraConnection c = new CassandraConnection("snackapi", "10.11.110.145", 9042);
-            SnackrBackend sb = new SnackrBackend(c);
-            
             var model = new InventoryViewModel
             {
-                SnackList = new SnackrBackend(new CassandraConnection("snackapi", "10.11.110.145", 9042)).GetSnacks().OrderBy(s => s.snack_brand).ToList()
+                SnackList = new SnackrBackend(new CassandraConnection(_configuration["CassandraCluster:Keyspace"], 
+                    _configuration["CassandraCluster:Hostname"], 
+                    Convert.ToInt16(_configuration["CassandraCluster:Port"]),
+                    _configuration["CassandraCluster:User"],
+                    _configuration["CassandraCluster:Password"]))
+                    .GetSnacks()
+                    .OrderBy(s => s.snack_brand)
+                    .ToList()
             };
 
             return View(model);
