@@ -1,7 +1,7 @@
 ﻿using System;
 using Cassandra;
 
-namespace Snackr
+namespace Snackr.Interfaces
 {
     public interface IConnection
     {

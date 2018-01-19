@@ -2,7 +2,7 @@
 using Cassandra;
 using System.Collections.Generic;
 
-namespace Snackr
+namespace Snackr.Interfaces
 {
     public class SnackrBackend
     {

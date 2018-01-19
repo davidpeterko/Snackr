@@ -13,7 +13,10 @@
             <th>Snack Brand</th>
             <th>Snack Name</th>
             <th>Total Available</th>
-            <th>Currently Requested</th>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <th>Currently Requested</th>
+            }
             <th>Tako Koin Value</th>
             <th>Action</th>
         </tr>
@@ -26,7 +29,10 @@
                <td>@snack.snack_brand</td>
                <td>@snack.snack_name</td>
                <td>@snack.snack_count</td>
-               <td>Not yet implemented</td>
+               @if (User.Identity.IsAuthenticated)
+               {
+                   <td>Not yet implemented</td>
+               }
                <td>Not yet implemented</td>
                @if (User.Identity.IsAuthenticated)
                {
