@@ -9,7 +9,7 @@ namespace Snackr
         ISession Session { get; set; }
         string Keyspace { get; set; }
         int Port { get; set; }
-        Uri HostName { get; set; } 
+        string HostName { get; set; } 
         
         ISession Connect();
     }

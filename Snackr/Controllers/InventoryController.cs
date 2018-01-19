@@ -12,9 +12,12 @@ namespace Snackr.Controllers
     {
         public IActionResult Index()
         {
+            CassandraConnection c = new CassandraConnection("snackapi", "10.11.110.145", 9042);
+            SnackrBackend sb = new SnackrBackend(c);
+            
             var model = new InventoryViewModel
             {
-                SnackList = new SnackrBackend(new CassandraConnection("snackapi", new Uri("10.11.110.145"), 9042)).GetSnacks().OrderBy(s => s.snack_brand).ToList()
+                SnackList = new SnackrBackend(new CassandraConnection("snackapi", "10.11.110.145", 9042)).GetSnacks().OrderBy(s => s.snack_brand).ToList()
             };
 
             return View(model);

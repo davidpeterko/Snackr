@@ -9,7 +9,7 @@ namespace Snackr
         public ISession Session { get; set; }
         public string Keyspace { get; set; }
         public int Port { get; set; }
-        public Uri HostName { get; set; }
+        public string HostName { get; set; }
         
         /// <summary>
         /// Constructor
@@ -17,11 +17,13 @@ namespace Snackr
         /// <param name="keyspace"></param>
         /// <param name="port"></param>
         /// <param name="host"></param>
-        public CassandraConnection(string keyspace, Uri host, int port)
+        public CassandraConnection(string keyspace, string host, int port)
         {
             this.Keyspace = keyspace;
-            this.Port = port;
             this.HostName = host;
+            this.Port = port;
+
+            this.Session = Connect();
         }
        
         /// <summary>
@@ -32,7 +34,7 @@ namespace Snackr
             this.Cluster = Cluster.Builder().AddContactPoint(this.HostName.ToString()).WithPort(this.Port)
                 .WithCredentials("admin", "texas123").Build(); 
             
-            return this.Session = Cluster.Connect(this.Keyspace);
+            return Cluster.Connect(this.Keyspace);
         }
 
     }

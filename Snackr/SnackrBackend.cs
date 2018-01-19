@@ -6,7 +6,7 @@ namespace Snackr
 {
     public class SnackrBackend
     {
-        public IConnection _CassandraConnection;
+        private readonly IConnection _CassandraConnection;
 
         /// <summary>
         /// constructor to set the cassandra connection, constructor injection
