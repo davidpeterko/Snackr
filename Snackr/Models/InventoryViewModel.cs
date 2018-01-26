@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Snackr.DataLayer;
 
 namespace Snackr.Models
 {

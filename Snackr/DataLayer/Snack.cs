@@ -1,18 +1,18 @@
-﻿namespace Snackr
+﻿namespace Snackr.DataLayer
 {
     public class Snack
     {
-        public string snack_brand { get; set; }
-        public string snack_name { get; set; }
-        public int snack_count { get; set; }
+        public string _snack_brand { get; set; }
+        public string _snack_name { get; set; }
+        public int _snack_count { get; set; }
         
         public Snack() {}
         
-        public Snack(string b, string n, int c)
+        public Snack(string snack_brand, string snack_name, int request_count)
         {
-            snack_brand = b;
-            snack_name = n;
-            snack_count = c;
+            _snack_brand = snack_brand;
+            _snack_name = snack_name;
+            _snack_count = request_count;
         }
 
     }

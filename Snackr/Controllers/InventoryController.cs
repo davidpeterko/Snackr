@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Threading;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Snackr.Models;
 using Snackr.Interfaces;
+using Snackr.DataLayer;
+using Snackr.Repositories;
 
 namespace Snackr.Controllers
 {
@@ -23,13 +23,13 @@ namespace Snackr.Controllers
         {
             var model = new InventoryViewModel
             {
-                SnackList = new SnackrBackend(new CassandraConnection(_configuration["CassandraCluster:Keyspace"], 
+                SnackList = new SnackRepository(new CassandraConnection(_configuration["CassandraCluster:Keyspace"], 
                     _configuration["CassandraCluster:Hostname"], 
                     Convert.ToInt16(_configuration["CassandraCluster:Port"]),
                     _configuration["CassandraCluster:User"],
                     _configuration["CassandraCluster:Password"]))
                     .GetSnacks()
-                    .OrderBy(s => s.snack_brand)
+                    .OrderBy(s => s._snack_brand)
                     .ToList()
             };
 
@@ -41,11 +41,11 @@ namespace Snackr.Controllers
             switch (key)
             {
                     case "brand":
-                        return snacks.OrderBy(s => s.snack_brand).ToList();
+                        return snacks.OrderBy(s => s._snack_brand).ToList();
                     case "name":
-                        return snacks.OrderBy(s => s.snack_name).ToList();
+                        return snacks.OrderBy(s => s._snack_name).ToList();
                     case "count":
-                        return snacks.OrderBy(s => s.snack_count).ToList();
+                        return snacks.OrderBy(s => s._snack_count).ToList();
                     default:
                         return snacks;
             }

@@ -1,19 +1,20 @@
 ﻿using System;
-using Cassandra;
 using System.Collections.Generic;
+using Snackr.Interfaces;
+using Snackr.DataLayer;
 
-namespace Snackr.Interfaces
+namespace Snackr.Repositories
 {
-    public class SnackrBackend
+    public class SnackRepository
     {
         private readonly IConnection _CassandraConnection;
 
         /// <summary>
         /// constructor to set the cassandra connection, constructor injection
         /// </summary>
-        public SnackrBackend(IConnection c)
+        public SnackRepository(IConnection connection)
         {
-            this._CassandraConnection = c;
+            this._CassandraConnection = connection;
         }
         
         /// <summary>
