@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Claims;
-using Cassandra;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Snackr.Models;
 using Snackr.Repositories;
 using Snackr.DataLayer;
+using Controller = Microsoft.AspNetCore.Mvc.Controller;
 
 namespace Snackr.Controllers
 {
+    [Route("Request")]
     public class RequestController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -19,9 +20,16 @@ namespace Snackr.Controllers
         {
             this._configuration = configuration;
         }
+
+        [Route("Index")]
+        public IActionResult Index()
+        {
+            return View();
+        }
         
+        [Route("RequestForm")]
         [Authorize]
-        public IActionResult Index(string snack_brand, string snack_name)
+        public IActionResult RequestForm(string snack_brand, string snack_name)
         {
             var getRequestModel = new GetRequestsModel()
             {
@@ -53,12 +61,13 @@ namespace Snackr.Controllers
             return View(model);
         }
 
+        [Route("MakeRequest")]
         [Authorize]
-        public IActionResult MakeRequest(string email, string snack_brand, string snack_name, int request_count)
+        public IActionResult MakeRequest(string email, string snack_brand, string snack_name, string request_count)
         {
             var makeRequestModel = new MakeRequestModel()
             {
-                Request = new Request(email, snack_brand, snack_name, request_count)
+                Request = new Request(email, snack_brand, snack_name, Int32.Parse(request_count))
             };
 
             var model = new RequestModel()
@@ -70,7 +79,7 @@ namespace Snackr.Controllers
                 _configuration["CassandraCluster:Hostname"],
                 Convert.ToInt16(_configuration["CassandraCluster:Port"]),
                 _configuration["CassandraCluster:User"],
-                _configuration["CassandraCluster:Password"])).MakeRequest(new Request(email, snack_brand, snack_name, request_count));
+                _configuration["CassandraCluster:Password"])).MakeRequest(new Request(email, snack_brand, snack_name, Int32.Parse(request_count)));
 
             if (result.Equals("Insufficient"))
             {

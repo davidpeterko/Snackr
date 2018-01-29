@@ -106,23 +106,36 @@ namespace Snackr.Repositories
         /// <returns></returns>
         public string MakeRequest(Request request)
         {
-            var countCQL = "SELECT * FROM snack_counts WHERE snack_brand='" + request._snack_brand +
-                           "' AND snack_name='" + request._snack_name + "';";
-            var requestCQL = "INSERT INTO snackapi.requests (email, snack_brand, snack_name, request_count)";
             var localSession = _CassandraConnection.Session;
 
             do
             {
                 try
                 {
-                    var rs = localSession.Execute(countCQL);
+                    var statement =
+                        localSession.Prepare(
+                            "SELECT * FROM snack_counts WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+                    
+                    var rs = localSession.Execute(statement.Bind(new {snack_brand=request._snack_brand, snack_name=request._snack_name}));
 
-                    if (rs.GetRows().First().GetValue<int>("request_count") == 0)
+                    if (rs.GetRows().First().GetValue<int>("snack_count") == 0)
                     {
                         return "Insufficient";
                     }
+
+                    statement = localSession.Prepare(
+                        "INSERT INTO snackapi.requests (email, snack_brand, snack_name, count) VALUES (:email, :snack_brand, :snack_name, :count);");
+
+                    localSession.Execute(statement.Bind(new
+                    {
+                        email = request._email,
+                        snack_brand = request._snack_brand,
+                        snack_name = request._snack_name,
+                        count = request._request_count
+                    }));
                     
-                    localSession.Execute(requestCQL);
+                    // Decrement count in db for snack_count
+                    
                 }
                 catch (Exception e)
                 {
