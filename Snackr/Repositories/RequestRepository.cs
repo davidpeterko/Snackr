@@ -118,7 +118,8 @@ namespace Snackr.Repositories
                     
                     var rs = localSession.Execute(statement.Bind(new {snack_brand=request._snack_brand, snack_name=request._snack_name}));
 
-                    if (rs.GetRows().First().GetValue<int>("snack_count") == 0)
+                    var currentCount = rs.GetRows().First().GetValue<int>("snack_count");
+                    if (currentCount == 0)
                     {
                         return "Insufficient";
                     }
@@ -134,8 +135,17 @@ namespace Snackr.Repositories
                         count = request._request_count
                     }));
                     
-                    // Decrement count in db for snack_count
-                    
+                    // Decrement count in db for snack_count if request was able to process
+                    statement = localSession.Prepare(
+                        "UPDATE snack_counts SET snack_count = :snack_count WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+
+                    localSession.Execute(statement.Bind(new
+                    {
+                        snack_count = currentCount - 1,
+                        snack_brand = request._snack_brand,
+                        snack_name = request._snack_name
+                    }));
+
                 }
                 catch (Exception e)
                 {
@@ -146,6 +156,47 @@ namespace Snackr.Repositories
             } while (localSession == null);
 
             return "Success";
+        }
+
+        /// <summary>
+        /// Decrement count of a snack
+        /// </summary>
+        /// <param name="request"></param>
+        public void DecrementCount(Request request)
+        {   
+            var localSession = _CassandraConnection.Session;
+
+            do
+            {
+                try
+                {
+                    var statement =
+                        localSession.Prepare(
+                            "SELECT * FROM snack_counts WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+                    
+                    var rs = localSession.Execute(statement.Bind(new {snack_brand=request._snack_brand, snack_name=request._snack_name}));
+
+                    var currentCount = rs.GetRows().First().GetValue<int>("snack_count");
+                    
+                    // Decrement count in db for snack_count if request was able to process
+                    statement = localSession.Prepare(
+                        "UPDATE snack_counts SET snack_count = :snack_count WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+
+                    localSession.Execute(statement.Bind(new
+                    {
+                        snack_count = currentCount - 1,
+                        snack_brand = request._snack_brand,
+                        snack_name = request._snack_name
+                    }));
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+                
+            } while (localSession == null);
         }
         
         

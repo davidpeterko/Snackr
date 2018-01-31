@@ -1,106 +1,55 @@
 ﻿@model RequestModel
        
-       <!DOCTYPE html>
-       
-       <html>
+<html>
        <head>
            <title>Request</title>
        </head>
-           <body>
-               <div>
-                   <center>
-                       <h1 class="text">Make A Request</h1>
-                   </center>
-                   
-                   <center>
-                       <form id="request_form" class="pure-form pure-form-aligned">
-                           <fieldset>
-                               <div class="pure-control-group">
-                                   <label for="email">Email</label>
-                                   <input id="email" type="text" placeholder="@Model.MakeRequestModel.Request._email" readonly>
-                               </div>
-           
-                               <div class="pure-control-group">
-                                   <label for="brand">Snack Brand</label>
-                                   <input id="brand" type="text" placeholder="@Model.MakeRequestModel.Request._snack_brand" readonly>
-                               </div>
-           
-                               <div class="pure-control-group">
-                                   <label for="name">Snack Name</label>
-                                   <input id="name" type="text" placeholder="@Model.MakeRequestModel.Request._snack_name" readonly>
-                               </div>
-           
-                               <div class="pure-control-group">
-                                   <label for="count">Request Count</label>
-                                   <input id="count" type="text" placeholder="1" readonly>
-                               </div>
-           
-                               <div class="pure-controls">
-                                   <label for="cb" class="pure-checkbox">
-                                       <input id="cb" type="checkbox"> I agree that Tako himself can deny any Snack requests.
-                                   </label>
-                                   
-                                   <center>
-                                       <button class="link"><a asp-area="" asp-controller="Request" asp-action="MakeRequest"
-                                                               asp-route-email="@Model.MakeRequestModel.Request._email" 
-                                                               asp-route-snack_brand="@Model.MakeRequestModel.Request._snack_brand" 
-                                                               asp-route-snack_name="@Model.MakeRequestModel.Request._snack_name" 
-                                                               asp-route-request_count="1">Request</a></button>
-                                   </center>
-                               </div>
-                           </fieldset>
-                       </form>
-                   </center>
-               </div>
-               <div>
-                   <center>
-                       <h1 class="text">Current Requests</h1>
-                   </center>
-                   
-                   @if (Model.GetRequestsModel.RequestList.Count == 0)
-                   {
-                       <center>There are no curernt requests for @Model.GetRequestsModel.Email</center>
-                   }
-                   else
-                   {
-                       <center>
-                           <table class="pure-table pure-table-bordered pure-table-striped" data-toggle="table">
-                               <thead>
-                               <tr>
-                                   <th>Email</th>
-                                   <th>Snack Brand</th>
-                                   <th>Snack Name</th>
-                                   <th>Count</th>
-                               </tr>
-                               </thead>    
+ 
+       <body>
+           <div>
+               <center>
+                   <h1 class="text">Make A Request</h1>
+               </center>
                
-                               <tbody>
-                               @foreach (var request in Model.GetRequestsModel.RequestList)
-                               {
-                                   <tr>
-                                       <td>@request._email</td>
-                                       <td>@request._snack_brand</td>
-                                       <td>@request._snack_name</td>
-                                       <td>@request._request_count</td>
-                                   </tr>
-                               }
-                               </tbody>
-                           </table>
-                       </center>               
-                   }
-               </div>
-           </body>
-       </html>
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
+               <center>
+                   <form id="request_form" class="pure-form pure-form-aligned">
+                       <fieldset>
+                           <div class="pure-control-group">
+                               <label for="email">Email</label>
+                               <input id="email" type="text" placeholder="@Model.MakeRequestModel.Request._email" readonly>
+                           </div>
+       
+                           <div class="pure-control-group">
+                               <label for="brand">Snack Brand</label>
+                               <input id="brand" type="text" placeholder="@Model.MakeRequestModel.Request._snack_brand" readonly>
+                           </div>
+       
+                           <div class="pure-control-group">
+                               <label for="name">Snack Name</label>
+                               <input id="name" type="text" placeholder="@Model.MakeRequestModel.Request._snack_name" readonly>
+                           </div>
+       
+                           <div class="pure-control-group">
+                               <label for="count">Request Count</label>
+                               <input id="count" type="text" placeholder="1" readonly>
+                           </div>
+       
+                           <div class="pure-controls">
+                               <label for="cb" class="pure-checkbox">
+                                   <input id="cb" type="checkbox"> I agree that Tako himself can deny any Snack requests.
+                               </label>
+                               
+                               <center>
+                                   <button class="link"><a asp-area="" asp-controller="Request" asp-action="MakeRequest"
+                                                           asp-route-email="@Model.MakeRequestModel.Request._email" 
+                                                           asp-route-snack_brand="@Model.MakeRequestModel.Request._snack_brand" 
+                                                           asp-route-snack_name="@Model.MakeRequestModel.Request._snack_name" 
+                                                           asp-route-request_count="1">Request</a></button>
+                               </center>
+                           </div>
+                       </fieldset>
+                   </form>
+               </center>
+           </div>
+       </body>
 </html>

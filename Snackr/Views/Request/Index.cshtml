@@ -1,12 +1,62 @@
 ﻿@model RequestModel
 
-<!DOCTYPE html>
-
 <html>
 <head>
     <title>Request</title>
 </head>
 
-    Requests
+<body>
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <div>
+            <center>
+                <h1 class="text-danger">You are not authorized to view this page.</h1>
+                <p class="text-danger">Please log into your account to view your current requests.</p>
+            </center>
+        </div>
+    }
+    else
+    {
+        <div>
+            <center>
+                <h1 class="text">Your Current Requests</h1>
+            </center>
+                   
+            <div id="req_table">
+                @if (Model.GetRequestsModel.RequestList.Count == 0)
+                {
+                    <center>There are no curernt requests for @Model.GetRequestsModel.Email</center>
+                }
+                else
+                {
+                    <center>
+                        <table class="pure-table pure-table-bordered pure-table-striped" data-toggle="table" style="margin:50px">
+                            <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Snack Brand</th>
+                                <th>Snack Name</th>
+                                <th>Count</th>
+                            </tr>
+                            </thead>    
+                   
+                            <tbody>
+                            @foreach (var request in Model.GetRequestsModel.RequestList)
+                            {
+                                <tr>
+                                    <td>@request._email</td>
+                                    <td>@request._snack_brand</td>
+                                    <td>@request._snack_name</td>
+                                    <td>@request._request_count</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </center>               
+                }
+            </div>
+        </div>
+    }
+</body>
 
 </html>
