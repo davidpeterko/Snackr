@@ -123,29 +123,42 @@ namespace Snackr.Repositories
                     {
                         return "Insufficient";
                     }
-
-                    statement = localSession.Prepare(
-                        "INSERT INTO snackapi.requests (email, snack_brand, snack_name, count) VALUES (:email, :snack_brand, :snack_name, :count);");
-
-                    localSession.Execute(statement.Bind(new
-                    {
-                        email = request._email,
-                        snack_brand = request._snack_brand,
-                        snack_name = request._snack_name,
-                        count = request._request_count
-                    }));
                     
-                    // Decrement count in db for snack_count if request was able to process
+                    // Check if theres already a snack request available, else just use the current passed request count since theres no request
                     statement = localSession.Prepare(
-                        "UPDATE snack_counts SET snack_count = :snack_count WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+                        "SELECT * FROM requests WHERE email = :email AND snack_brand = :snack_brand AND snack_name = :snack_name;");
 
-                    localSession.Execute(statement.Bind(new
+                    rs = localSession.Execute(statement.Bind(new {email = request._email}));
+
+                    // If any requests available for this snack, just increment the value
+                    if (rs.GetRows().Any())
                     {
-                        snack_count = currentCount - 1,
-                        snack_brand = request._snack_brand,
-                        snack_name = request._snack_name
-                    }));
+                        var existingCount = rs.GetRows().First().GetValue<int>("snack_count");
+                        
+                        statement = localSession.Prepare(
+                            "INSERT INTO snackapi.requests (email, snack_brand, snack_name, count) VALUES (:email, :snack_brand, :snack_name, :count);");
 
+                        localSession.Execute(statement.Bind(new
+                        {
+                            email = request._email,
+                            snack_brand = request._snack_brand,
+                            snack_name = request._snack_name,
+                            count = existingCount + 1
+                        }));
+                    }
+                    else
+                    {
+                        statement = localSession.Prepare(
+                            "INSERT INTO snackapi.requests (email, snack_brand, snack_name, count) VALUES (:email, :snack_brand, :snack_name, :count);");
+
+                        localSession.Execute(statement.Bind(new
+                        {
+                            email = request._email,
+                            snack_brand = request._snack_brand,
+                            snack_name = request._snack_name,
+                            count = request._request_count
+                        }));
+                    }
                 }
                 catch (Exception e)
                 {
