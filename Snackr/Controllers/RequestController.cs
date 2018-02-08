@@ -44,8 +44,6 @@ namespace Snackr.Controllers
             };
             
             return View(model);
-            
-            return View();
         }
         
         /// <summary>
@@ -92,7 +90,7 @@ namespace Snackr.Controllers
             
             var makeRequestModel = new MakeRequestModel()
             {
-                Request = new Request(email, snack_brand, snack_name, Int32.Parse(request_count))
+                Request = request
             };
 
             var model = new RequestModel()
@@ -110,6 +108,30 @@ namespace Snackr.Controllers
             {
                 new RequestRepository(_connection).DecrementCount(request);
             }
+
+            return View(model);
+        }
+
+        [Route("CancelRequest")]
+        [Authorize]
+        public IActionResult CancelRequest(string email, string snack_brand, string snack_name, string request_count)
+        {
+            Request request = new Request(email, snack_brand, snack_name, Int32.Parse(request_count));
+
+            var cancelRequestModel = new CancelRequestModel()
+            {
+                Request = request
+            };
+
+            var model = new RequestModel()
+            {
+                CancelRequestModel = cancelRequestModel
+            };
+
+            // Cancel request
+            RequestRepository requestRepository = new RequestRepository(_connection);
+            requestRepository.CancelRequest(request);
+            requestRepository.IncrementCount(request);
 
             return View(model);
         }

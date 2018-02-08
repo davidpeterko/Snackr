@@ -112,53 +112,41 @@ namespace Snackr.Repositories
             {
                 try
                 {
-                    var statement =
+                    var snackCountStatement =
                         localSession.Prepare(
-                            "SELECT * FROM snack_counts WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+                            "SELECT * FROM snackapi.snack_counts WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
                     
-                    var rs = localSession.Execute(statement.Bind(new {snack_brand=request._snack_brand, snack_name=request._snack_name}));
+                    var snackCountRs = localSession.Execute(snackCountStatement.Bind(new {snack_brand=request._snack_brand, snack_name=request._snack_name}));
 
-                    var currentCount = rs.GetRows().First().GetValue<int>("snack_count");
+                    var currentCount = snackCountRs.GetRows().First().GetValue<int>("snack_count");
                     if (currentCount == 0)
                     {
                         return "Insufficient";
                     }
                     
                     // Check if theres already a snack request available, else just use the current passed request count since theres no request
-                    statement = localSession.Prepare(
-                        "SELECT * FROM requests WHERE email = :email AND snack_brand = :snack_brand AND snack_name = :snack_name;");
+                    var requestCountStatement= localSession.Prepare(
+                        "SELECT * FROM snackapi.requests WHERE email = :email AND snack_brand = :snack_brand AND snack_name = :snack_name;");
 
-                    rs = localSession.Execute(statement.Bind(new {email = request._email}));
+                    var requestCountRs = localSession.Execute(requestCountStatement.Bind(new 
+                        {
+                            email = request._email,
+                            snack_brand = request._snack_brand,
+                            snack_name = request._snack_name
+                        }));
 
-                    // If any requests available for this snack, just increment the value
-                    if (rs.GetRows().Any())
-                    {
-                        var existingCount = rs.GetRows().First().GetValue<int>("snack_count");
-                        
-                        statement = localSession.Prepare(
-                            "INSERT INTO snackapi.requests (email, snack_brand, snack_name, count) VALUES (:email, :snack_brand, :snack_name, :count);");
+                    var currentRequestCount = requestCountRs.GetRows().First().GetValue<int>("count");
 
-                        localSession.Execute(statement.Bind(new
+                    var newCountStatement= localSession.Prepare(
+                        "INSERT INTO snackapi.requests (email, snack_brand, snack_name, count) VALUES (:email, :snack_brand, :snack_name, :count);");
+
+                        localSession.Execute(newCountStatement.Bind(new
                         {
                             email = request._email,
                             snack_brand = request._snack_brand,
                             snack_name = request._snack_name,
-                            count = existingCount + 1
+                            count = request._request_count + currentRequestCount
                         }));
-                    }
-                    else
-                    {
-                        statement = localSession.Prepare(
-                            "INSERT INTO snackapi.requests (email, snack_brand, snack_name, count) VALUES (:email, :snack_brand, :snack_name, :count);");
-
-                        localSession.Execute(statement.Bind(new
-                        {
-                            email = request._email,
-                            snack_brand = request._snack_brand,
-                            snack_name = request._snack_name,
-                            count = request._request_count
-                        }));
-                    }
                 }
                 catch (Exception e)
                 {
@@ -209,6 +197,92 @@ namespace Snackr.Repositories
                     throw;
                 }
                 
+            } while (localSession == null);
+        }
+
+        /// <summary>
+        /// Increment count of a snack
+        /// </summary>
+        /// <param name="request"></param>
+        public void IncrementCount(Request request)
+        {   
+            var localSession = _CassandraConnection.Session;
+
+            do
+            {
+                try
+                {
+                    var statement =
+                        localSession.Prepare(
+                            "SELECT * FROM snack_counts WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+                    
+                    var rs = localSession.Execute(statement.Bind(new 
+                    {
+                        snack_brand=request._snack_brand,
+                        snack_name=request._snack_name}));
+
+                    var currentCount = rs.GetRows().First().GetValue<int>("snack_count");
+                    
+                    // Decrement count in db for snack_count if request was able to process
+                    statement = localSession.Prepare(
+                        "UPDATE snack_counts SET snack_count = :snack_count WHERE snack_brand = :snack_brand AND snack_name = :snack_name;");
+
+                    localSession.Execute(statement.Bind(new
+                    {
+                        snack_count = currentCount + 1,
+                        snack_brand = request._snack_brand,
+                        snack_name = request._snack_name
+                    }));
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+                
+            } while (localSession == null);
+        }
+
+        /// <summary>
+        /// Cancel request, decrement request, increment count
+        /// </summary>
+        /// <param name="request"></param>
+        public void CancelRequest(Request request)
+        {
+            var localSession =  _CassandraConnection.Session;
+
+            do
+            {
+                try
+                {
+                    var statement =
+                        localSession.Prepare(
+                            "SELECT * FROM requests WHERE email = :email AND snack_brand = :snack_brand AND snack_name = :snack_name;");
+                    
+                    var rs = localSession.Execute(statement.Bind(new 
+                    {
+                        email=request._email,
+                        snack_brand=request._snack_brand,
+                        snack_name=request._snack_name}));
+
+                    var currentRequestCount = rs.GetRows().First().GetValue<int>("count");
+                    statement =
+                        localSession.Prepare(
+                            "UPDATE requests SET count = :count WHERE email = :email AND snack_brand = :snack_brand AND snack_name = :snack_name;");
+
+                    rs = localSession.Execute(statement.Bind(new 
+                    {
+                        count=currentRequestCount - 1,
+                        email=request._email,
+                        snack_brand=request._snack_brand,
+                        snack_name=request._snack_name}));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
             } while (localSession == null);
         }
         

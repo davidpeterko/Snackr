@@ -7,5 +7,6 @@ namespace Snackr.Models
     {
         public GetRequestsModel GetRequestsModel { get; set; }
         public MakeRequestModel MakeRequestModel { get; set; }
+        public CancelRequestModel CancelRequestModel { get; set; }
     }
 }

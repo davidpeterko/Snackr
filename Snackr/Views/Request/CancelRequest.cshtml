@@ -1,0 +1,27 @@
+@model RequestModel
+
+
+<html>
+<head>
+    <title>Request Cancellation Successful</title>
+</head>
+<body>
+<div>
+    <center>
+        <h1 class="text-success">Request Cancellation Successful</h1>
+        <p class="text-success">Your request to cancel was successful.</p>
+        <p class="text-success">
+            Request Cancellation Info:<br>
+            <b>Email:</b> @Model.CancelRequestModel.Request._email<br>
+            <b>Snack Brand:</b> @Model.CancelRequestModel.Request._snack_brand<br>
+            <b>Snack Name:</b> @Model.CancelRequestModel.Request._snack_name<br>
+            <b>Cancelled Count:</b> @Model.CancelRequestModel.Request._request_count<br>
+        </p>
+    </center>
+    
+    <center>
+        <button class="link"><a asp-area="" asp-controller="Request" asp-action="Index">Return To Requests</a></button>
+    </center>
+</div>
+</body>
+</html>
