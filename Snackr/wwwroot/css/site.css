@@ -18,4 +18,25 @@
     text-align: center;
 }
 
+.navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+
+img.img1{
+    width: 50px;
+    height: 50px;
+}
+
+#login-btn{
+    padding: 35px 50px 25px 100px;
+}
+
+#title_homepage {
+    font-family: "Stay Wildy Personal Use Only";
+    font-szie: 70px;
+}
+
+
 

@@ -1,0 +1,28 @@
+﻿@model Snackr.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log In";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <section>
+            <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+                <br/>
+                <div class="form-group">
+                    <div id="login-btn">
+                        <center>
+                            <p>
+                                Currently only Gene By Gene domain users are allowed access to Snackr.
+                            </p>
+                            <a class="btn btn-lg btn-default btn-block" asp-controller="Account" asp-action="LoginExternal" asp-route-connection="google-oauth2" asp-route-returnurl="@ViewData["ReturnUrl"]">
+                                Login with Google
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model Snackr.Models.UserProfileViewModel
+
+@{
+    ViewBag.Title = "Your Account";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <center>
+                <h2>Account Information</h2>
+            
+                <div id="profile-img">
+                    <div class="col-md-2">
+                        <img src="@Model.ProfileImage"
+                             alt="" class="img-rounded img-responsive"/>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="account-display">
+    <center>
+        <bold>Name:</bold> @Model.Name<br/>
+        <bold>Email</bold> @Model.EmailAddress<br/>
+        <bold>Snack Permissions:</bold> Normal
+    </center>
+</div>
+
+

@@ -13,7 +13,10 @@
             <th>Snack Brand</th>
             <th>Snack Name</th>
             <th>Total Available</th>
-            <th>Currently Requested</th>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <th>Currently Requested</th>
+            }
             <th>Tako Koin Value</th>
             <th>Action</th>
         </tr>
@@ -26,9 +29,19 @@
                <td>@snack.snack_brand</td>
                <td>@snack.snack_name</td>
                <td>@snack.snack_count</td>
+               @if (User.Identity.IsAuthenticated)
+               {
+                   <td>Not yet implemented</td>
+               }
                <td>Not yet implemented</td>
-               <td>Not yet implemented</td>
-               <td><button class="link">Request</button></td>
+               @if (User.Identity.IsAuthenticated)
+               {
+                   <td><button class="link"><a asp-area="" asp-controller="Request" asp-action="Index">Request</a></button></td>
+               }
+               else
+               {
+                   <td><button class="link"><a asp-area="" asp-controller="Account" asp-action="AccessDenied">Request</a></button></td>
+               }
            </tr>
        }
     </tbody>

@@ -3,14 +3,25 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Auth0" Version="3.6.0" />
+    <PackageReference Include="Auth0-ASPNET" Version="2.1.1" />
+    <PackageReference Include="Auth0.AuthenticationApi" Version="4.3.1" />
+    <PackageReference Include="Auth0.Core" Version="4.0.2" />
+    <PackageReference Include="Auth0.ManagementApi" Version="4.10.1" />
     <PackageReference Include="CassandraCSharpDriver" Version="3.4.0" />
     <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.1" />
+    <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.1" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.4-preview1" />
     <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.4-preview1" />
     <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.4-preview1" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.1" />
     <PackageReference Include="NUnit" Version="3.9.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
