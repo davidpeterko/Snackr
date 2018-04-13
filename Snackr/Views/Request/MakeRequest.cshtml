@@ -1,0 +1,26 @@
+﻿@model RequestModel
+
+<html>
+<head>
+    <title>Request Successful</title>
+</head>
+<body>
+<div>
+    <center>
+        <h1 class="text-success">Request Successful</h1>
+        <p class="text-success">Your request was successful.</p>
+        <p class="text-success">
+            Snack Request Info:<br>
+            <b>Email:</b> @Model.MakeRequestModel.Request._email<br>
+            <b>Snack Brand:</b> @Model.MakeRequestModel.Request._snack_brand<br>
+            <b>Snack Name:</b> @Model.MakeRequestModel.Request._snack_name<br>
+            <b>Request Count:</b> @Model.MakeRequestModel.Request._request_count<br>
+        </p>
+    </center>
+    
+    <center>
+        <button class="link"><a asp-area="" asp-controller="Inventory" asp-action="Index">Return To Inventory</a></button>
+    </center>
+</div>
+</body>
+</html>

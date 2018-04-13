@@ -1,50 +1,37 @@
-﻿@{
-    ViewData["Title"] = "Inventory";
-}
+﻿@model InventoryViewModel
 
-@model InventoryViewModel
+<center>
+    <div id="inven_table">
+        <table class="pure-table pure-table-bordered pure-table-striped" data-toggle="table" style="margin:50px">
+            <thead>
+            <tr>
+                <th>Snack Brand</th>
+                <th>Snack Name</th>
+                <th>Total Available</th>
+                <th>Tako Koin Value</th>
+                <th>Action</th>
+            </tr>
+            </thead>
 
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
-<table class="pure-table pure-table-bordered pure-table-striped" data-toggle="table">
-    <thead>
-        <tr>
-            <th>Snack Brand</th>
-            <th>Snack Name</th>
-            <th>Total Available</th>
-            @if (User.Identity.IsAuthenticated)
+            <tbody>
+            @foreach (var snack in Model.SnackList)
             {
-                <th>Currently Requested</th>
+                <tr>
+                    <td>@snack._snack_brand</td>
+                    <td>@snack._snack_name</td>
+                    <td>@snack._snack_count</td>
+                    <td>Not yet implemented</td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <td><button class="link"><a asp-area="" asp-controller="Request" asp-action="RequestForm" asp-route-snack_brand="@snack._snack_brand" asp-route-snack_name="@snack._snack_name">Request</a></button></td>
+                    }
+                    else
+                    {
+                        <td><button class="link"><a asp-area="" asp-controller="Account" asp-action="AccessDenied">Request</a></button></td>
+                    }
+                </tr>
             }
-            <th>Tako Koin Value</th>
-            <th>Action</th>
-        </tr>
-    </thead>    
-    
-    <tbody>
-       @foreach (var snack in Model.SnackList)
-       {
-           <tr>
-               <td>@snack.snack_brand</td>
-               <td>@snack.snack_name</td>
-               <td>@snack.snack_count</td>
-               @if (User.Identity.IsAuthenticated)
-               {
-                   <td>Not yet implemented</td>
-               }
-               <td>Not yet implemented</td>
-               @if (User.Identity.IsAuthenticated)
-               {
-                   <td><button class="link"><a asp-area="" asp-controller="Request" asp-action="Index">Request</a></button></td>
-               }
-               else
-               {
-                   <td><button class="link"><a asp-area="" asp-controller="Account" asp-action="AccessDenied">Request</a></button></td>
-               }
-           </tr>
-       }
-    </tbody>
-</table>
-
-
+            </tbody>
+        </table>
+    </div>
+</center>

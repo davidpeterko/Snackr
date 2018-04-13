@@ -10,6 +10,8 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Rewrite.Internal;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Snackr

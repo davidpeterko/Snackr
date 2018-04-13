@@ -24,9 +24,22 @@
     position: absolute;
 }
 
+img{
+    display: block;
+    margin: 0 auto;
+}
+
 img.img1{
     width: 50px;
     height: 50px;
+}
+
+img.profile_picture{
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
 }
 
 #login-btn{
@@ -37,6 +50,5 @@ img.img1{
     font-family: "Stay Wildy Personal Use Only";
     font-szie: 70px;
 }
-
 
 

@@ -1,9 +1,4 @@
-﻿@model Snackr.Models.UserProfileViewModel
-
-@{
-    ViewBag.Title = "Your Account";
-    Layout = "_Layout";
-}
+﻿@model UserProfileViewModel
 
 <div class="row">
     <div class="col-md-12">
@@ -13,8 +8,7 @@
             
                 <div id="profile-img">
                     <div class="col-md-2">
-                        <img src="@Model.ProfileImage"
-                             alt="" class="img-rounded img-responsive"/>
+                        <img class="profile_picture" src="@Model.ProfileImage" alt="" class="img-rounded img-responsive"/>
                     </div>
                 </div>
             </center>
@@ -24,9 +18,10 @@
 <br/>
 <div class="account-display">
     <center>
-        <bold>Name:</bold> @Model.Name<br/>
-        <bold>Email</bold> @Model.EmailAddress<br/>
-        <bold>Snack Permissions:</bold> Normal
+        <b>Name:</b> @Model.Name<br/>
+        <b>Email:</b> @Model.EmailAddress<br/>
+        <b>Snack Permissions:</b> @Model.Permission<br/> 
+        <b>Tako Koin Count:</b> @Model.TakoKoinCount<br/>
     </center>
 </div>
 

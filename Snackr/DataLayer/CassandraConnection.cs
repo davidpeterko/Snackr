@@ -1,9 +1,8 @@
-﻿using System;
-using Auth0.ManagementApi.Models;
-using Cassandra;
+﻿using Cassandra;
 using Microsoft.Extensions.Configuration;
+using Snackr.Interfaces;
 
-namespace Snackr.Interfaces
+namespace Snackr.DataLayer
 {
     public class CassandraConnection : IConnection
     {
@@ -15,8 +14,6 @@ namespace Snackr.Interfaces
         public string User { get; set; }
         public string Password { get; set; }
 
-        private IConfiguration _configuration;
-        
         /// <summary>
         /// Constructor
         /// </summary>
