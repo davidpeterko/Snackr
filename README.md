@@ -32,7 +32,7 @@ Users class object will contain the basic information of a user: (email text, fi
 More information to be added at a later date.
 
 # Requests
-Not yet implemented but will be implemented with a Requests class with properties (email text, snack_brand text, snack_name text, snack_count). When a request is made, database is checked if user has enough Tako Koins to make this request; redirect URI to tako koin page if not enough.
+Implemented with a Requests class with properties (email text, snack_brand text, snack_name text, snack_count). When a request is made, database is checked if user has enough Tako Koins to make this request; redirect URI to tako koin page if not enough.
 Requests model implemented and stored in Apache Cassandra. 
 Future additions: ability to select delivery option. 
 
